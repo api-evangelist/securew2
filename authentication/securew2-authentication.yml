@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: https://securew2.com/documentation/rest-api-based-organization-provisioning-for-msps
+docs: https://securew2.com/documentation/rest-api-based-organization-provisioning-for-msps
+summary:
+  types:
+  - http
+  http_schemes:
+  - bearer
+  oauth2_flows: []
+  notes: >-
+    The SecureW2 REST API for MSP organization provisioning authenticates with a
+    bearer token. A "REST API Organization Management Token" is generated in the
+    JoinNow Management Portal and downloaded as a CSV containing an API Key ID and
+    API Secret. The secret is presented on each request in the Authorization header
+    as "Bearer <secret>". Tokens can be scoped Read-Only (GET) or Read-Write
+    (GET/POST/PATCH) and require an APEX, Guardian, or Campus license.
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  location: header
+  header: Authorization
+  format: 'Bearer <API Secret>'
+  token_source: JoinNow Management Portal (REST API Organization Management Token)
+  access_levels:
+  - Read-Only
+  - Read-Write
+  sources:
+  - docs:rest-api-based-organization-provisioning-for-msps

@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: searched
+source: https://securew2.com/documentation/rest-api-based-organization-provisioning-for-msps
+api: SecureW2 REST API (MSP Organization Provisioning)
+base_url: https://api.securew2.com/v1
+authentication:
+  style: bearer-token
+  header: Authorization
+  format: 'Bearer <API Secret>'
+  ref: authentication/securew2-authentication.yml
+versioning:
+  style: uri-path
+  current: v1
+  ref: lifecycle/securew2-lifecycle.yml
+pagination:
+  style: paginated-list
+  evidence: >-
+    The GET /v1/organizations/ endpoint returns a paginated list of child
+    organizations under an MSP. Specific page/cursor parameter names were not
+    documented on the public guide.
+resource_identifier:
+  field: organizationCode
+  usage: path parameter for single-organization GET/PATCH operations
+methods:
+  read: [GET]
+  write: [POST, PATCH]
+idempotency:
+  supported: false
+  notes: No idempotency-key header or contract is documented for this API.
+error_envelope:
+  format: unknown
+  notes: No public error-code reference documented for the REST API.
+rate_limit_signaling:
+  documented: false
+notes: >-
+  Cross-cutting conventions derived from the single public REST API guide (MSP
+  organization provisioning). SecureW2 does not publish an OpenAPI specification;
+  fields left null/unknown were not documented on the public surface and were not
+  inferred. No idempotency support was found, so no Idempotency pointer is emitted.

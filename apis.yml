@@ -1,8 +1,27 @@
 aid: securew2
 name: SecureW2
-description: 'SecureW2 is a company surfaced as a portfolio company of insight-partners and added to the
-  API Evangelist network as a stub for enrichment. Sector: cybersecurity. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  SecureW2 is a cloud-native, certificate-based network security platform whose
+  JoinNow suite delivers passwordless authentication through Dynamic PKI, managed
+  device onboarding, and a multi-tenant Cloud RADIUS service for 802.1X Wi-Fi and
+  wired access. Its public REST API lets Managed Service Providers programmatically
+  provision and manage child organizations, and its certificate-issuance APIs
+  automate EAP-TLS enrollment across MDM, IdP, and RMM integrations. SecureW2 is
+  backed by Insight Partners and focuses on continuous, identity- and risk-aware
+  trust for both human and non-human identities.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.securew2.com/wp-content/uploads/2021/09/securew2-logo.png
 url: https://raw.githubusercontent.com/api-evangelist/securew2/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,16 +31,77 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Cybersecurity
-apis: []
+- Authentication
+- PKI
+- Certificates
+- Network Security
+- Passwordless
+- RADIUS
+- Identity
+- MSP
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: SecureW2 REST API (MSP Organization Provisioning)
+  description: >-
+    REST API for Managed Service Providers to automate the lifecycle of their child
+    organizations under an MSP tenant. Bearer-token authenticated; supports listing,
+    retrieving, creating, and updating organizations. Requires an APEX, Guardian, or
+    Campus license.
+  humanURL: https://securew2.com/documentation/rest-api-based-organization-provisioning-for-msps
+  baseURL: https://api.securew2.com/v1
+  tags:
+  - REST API
+  - Provisioning
+  - MSP
+  - Organizations
+  properties:
+  - type: APIReference
+    url: https://securew2.com/documentation/rest-api-based-organization-provisioning-for-msps
+  - type: Authentication
+    url: authentication/securew2-authentication.yml
 common:
 - type: Website
   url: https://www.securew2.com/
+- type: DeveloperPortal
+  url: https://securew2.com/documentation
+- type: Documentation
+  url: https://securew2.com/documentation
+- type: APIReference
+  url: https://securew2.com/documentation/rest-api-based-organization-provisioning-for-msps
+- type: Support
+  url: https://securew2.com/support
+- type: Blog
+  url: https://securew2.com/blog
+- type: Pricing
+  url: https://securew2.com/pricing
+- type: Login
+  url: https://cloud.securew2.com/
+- type: TermsOfService
+  url: https://securew2.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://securew2.com/privacy-policy
+- type: Integrations
+  url: https://securew2.com/integrations
+- type: StatusPage
+  url: https://status.securew2.com/
+- type: Authentication
+  url: authentication/securew2-authentication.yml
+- type: Lifecycle
+  url: lifecycle/securew2-lifecycle.yml
+- type: Conventions
+  url: conventions/securew2-conventions.yml
+- type: DomainSecurity
+  url: security/securew2-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 4
+  pass: local-v1
