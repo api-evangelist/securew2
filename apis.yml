@@ -61,6 +61,11 @@ apis:
   - REST API
   - Provisioning
   - MSP
+  - Organization
+  tags_raw:
+  - REST API
+  - Provisioning
+  - MSP
   - Organizations
   properties:
   - type: APIReference
