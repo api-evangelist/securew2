@@ -9,6 +9,17 @@ description: >-
   automate EAP-TLS enrollment across MDM, IdP, and RMM integrations. SecureW2 is
   backed by Insight Partners and focuses on continuous, identity- and risk-aware
   trust for both human and non-human identities.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
