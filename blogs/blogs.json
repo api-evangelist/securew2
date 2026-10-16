@@ -2,10 +2,17 @@
   "repo": "securew2",
   "feeds": [
     {
-      "source": "https://securew2.com/support",
+      "source": "https://securew2.com/blog",
+      "feed_url": "https://securew2.com/blog",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://securew2.com/feed",
       "error": "HTTPError"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-10-03T12:30:02Z"
+  "fetched": "2026-10-10T13:15:00Z"
 }
